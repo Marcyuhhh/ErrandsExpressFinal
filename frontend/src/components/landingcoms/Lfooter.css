@@ -1,0 +1,10 @@
+.footer {
+    font-family: "Montserrat";
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(150deg, darkblue,gold, darkblue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 20px;
+  }
