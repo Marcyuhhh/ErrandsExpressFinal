@@ -10,7 +10,7 @@ function Lnavbar() {
     <header className="Lheader">
       <div className="logo-container">
         <img src={logo} alt="Errands Express Logo" className="header-logo" />
-        <h1 className="logo">Errands Express</h1>
+        <h1 className="logo">ERRANDS EXPRESS</h1>
       </div>
 
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>

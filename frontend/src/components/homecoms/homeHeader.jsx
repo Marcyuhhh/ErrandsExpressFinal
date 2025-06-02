@@ -48,7 +48,7 @@ function Header() {
           style={{ cursor: 'pointer' }}
         >
           <img src={logo} alt="Errands Logo" className="sidebar-logo" />
-          <h1 className="logo-title">Errands Express</h1>
+          <h1 className="hlogo-title">Errands Express</h1>
         </div>
 
         <div className="header-right">

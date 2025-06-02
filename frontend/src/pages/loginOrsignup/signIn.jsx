@@ -28,12 +28,22 @@ function SignInForm() {
 
       const { token, user } = response.data;
 
-      // Store token (you can optionally handle "rememberMe" logic here)
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
 
-      // Navigate to home
-      navigate('/home');
+      // ✅ SPECIAL ACCOUNT CHECK
+      const specialEmail = "admin@example.com";
+      const specialPassword = "admin123";
+
+      if (
+        formData.email === specialEmail &&
+        formData.password === specialPassword
+      ) {
+        navigate('/admin-dashboard'); // 🎯 Redirect to special page
+      } else {
+        navigate('/home'); // 🌐 Default redirect
+      }
+
     } catch (err) {
       if (err.response && err.response.data) {
         setError(err.response.data.error || "Login failed");

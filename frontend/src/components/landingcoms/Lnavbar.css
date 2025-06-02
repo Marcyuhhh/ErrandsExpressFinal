@@ -1,93 +1,64 @@
 .Lheader {
-    background: linear-gradient(150deg, rgb(0, 0, 138), rgb(236, 186, 49));
-    color: white;
+    background: #E3AC38;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Remove padding here */
-    /* padding: 0 2%; */
     flex-wrap: wrap;
     margin: 0; 
-    width: 100vw; 
+    width: 100vw;
+    height: 80px;
     box-sizing: border-box;
-    position: fixed; /* optional: keep header on top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
 }
 
-/* Add padding inside the logo container and nav */
 .logo-container {
     display: flex;
-    align-items: center;
-    padding-left: 2%;  /* add padding here */
+    padding-left: 2%;
+    margin-top: 10px;
 }
 
 .nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2%;  /* add padding here */
+    padding-right: 2%;
 }
 
 .header-logo {
     width: 70px;
     height: auto;
-    margin-top: 12px;
-    margin-right: 20px; /* space between logo and text */
-    margin-left: 0; /* reset previous left margin */
+    margin-right: 20px;
+    margin-left: 0;
+    margin-top: 20px;
 }
 
 .logo {
-  font-family: "Unbounded";
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 2px; 
-  background: linear-gradient(to right, rgb(236, 186, 49), #fff8dc); 
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  margin: 0;
-  margin-top: 12px;
-  padding: 10px 0;
+  align-self: center;
+  font-family: "Istok Web", sans-serif;
+  font-size: 36px; 
+  color: white;
+  margin-top: 0;
 }
 
-.nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    padding: 0;
 }
-
 .nav-links li a {
     font-family: "Montserrat";
-    color: white;
+    color:#00008B;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
-
 .nav-links li a:hover {
-    color: darkblue;
-}
-
-hr {
-    border: none;
-    height: 2%;
-    background-color: rgba(255, 255, 255, 0.3);
-    width: 100%;
-    margin-top: 10px;
+    color: #E3AC38;
 }
 
 /* Burger Menu Icon */
@@ -96,22 +67,22 @@ hr {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    margin-right: 30px;
 }
 
 .menu-icon .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #00008B;
     border-radius: 2px;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .nav-links {
     position: absolute;
-    top: 80px; /* below header */
     right: 0;
-    background: rgb(0, 0, 138);
+    background: white;
     flex-direction: column;
     gap: 20px;
     padding: 20px;

@@ -26,17 +26,9 @@ function Auth() {
   return (
     <div className='Auth'>
       <Lnavbar />
-      <div
-        className="auth-wrapper"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <div className="auth-wrapper" >
         <div className="auth-box">
-          <h1 className='title3'>{isSignUp ? 'Welcome!' : 'Welcome Back!'}</h1>
+          <h1 className='auth_title'>{isSignUp ? 'Welcome!' : 'Welcome Back!'}</h1>
           <div className="toggle-auth-container">
             <span className="toggle-text">
               {isSignUp ? "Already have an account?" : "Don't have an account?"}
