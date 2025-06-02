@@ -1,0 +1,63 @@
+.section {
+  scroll-margin-top: 150px;
+  font-family: "Istok Web", sans-serif; /* Adjust based on navbar height */
+}
+
+.benefit-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.benefit-item {
+  max-width: 300px;
+  text-align: center;
+}
+
+
+.founder-card {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.section-about h2{
+    margin-top: 100px;
+    justify-content: start;
+    margin-left: 40px;
+
+}
+.about-content {
+  max-width: 600px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.section-founders h2{
+    margin-top: 150px;
+    text-align: center;
+}
+
+.section-founders p{
+    margin-top: 20px;
+    margin-right:90px ;
+    margin-left: 90px;
+    text-align: center;
+}
+
+
+.founder-card img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}

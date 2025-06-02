@@ -1,10 +1,16 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/ErrandsLogo.png';
 import './Lnavbar.css';
-import { Link } from 'react-router-dom';
 
 function Lnavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId) => {
+    navigate('/', { state: { scrollTo: sectionId } });
+    setMenuOpen(false);
+  };
 
   return (
     <header className="Lheader">
@@ -15,11 +21,11 @@ function Lnavbar() {
 
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
         <ul className="nav-links">
-          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
-          <li><Link to="/feedbacks" onClick={() => setMenuOpen(false)}>Feedbacks</Link></li>
-          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link></li>
-          <li><Link to="/Auth" onClick={() => setMenuOpen(false)}>Sign Up</Link></li>
+           <li><button onClick={() => scrollToSection('home')}>Home</button></li>
+  <li><button onClick={() => scrollToSection('about')}>About Us</button></li>
+  <li><button onClick={() => scrollToSection('feedbacks')}>Feedbacks</button></li>
+  <li><button onClick={() => scrollToSection('contact')}>Contact Us</button></li>
+  <li><a href="/auth" onClick={() => setMenuOpen(false)}>Sign Up</a></li>
         </ul>
       </nav>
 

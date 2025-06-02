@@ -1,9 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/landingPage/landingpage';
 import Auth from './pages/loginOrsignup/auth';
-import AboutUs from './pages/landingPage/aboutUs';
-import FeedbacksPage from './pages/landingPage/feedbackPage';
-import ContactPage from './pages/landingPage/contactPage';
 import Home from './pages/home/home';
 import Homelayout from './components/homecoms/homelayout';
 import Inbox from './pages/inbox/inbox';
@@ -21,9 +18,6 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/auth" element={<Auth />} />
-      <Route path="/about" element={<AboutUs />} />
-      <Route path="/feedbacks" element={<FeedbacksPage />} />
-      <Route path="/contact" element={<ContactPage />} />
       <Route element={<Homelayout />}>
         <Route path="/home" element={<Home />} />
         <Route path="/notification" element={<Notification />} />

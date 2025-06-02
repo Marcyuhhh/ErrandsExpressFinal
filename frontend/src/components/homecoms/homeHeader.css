@@ -1,6 +1,5 @@
-.main-header {
-  background: linear-gradient(169deg, darkblue, gold);
-  color: white;
+.hmain-header {
+  background: white;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -14,22 +13,18 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.header-left {
+.hheader-left {
   display: flex;
   align-items: center;
   gap: 18px;
   font-family: "Unbounded";
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: 2px; 
   background: linear-gradient(to right, rgb(236, 186, 49), #fff8dc); 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  margin: 0;
-  margin-top: 0;
-  padding: 10px 0;
 }
 
 .sidebar-logo {
@@ -46,13 +41,13 @@
   position: relative;
 }
 
-.hamburger-menu-btn {
+.hhamburger-menu-btn {
   background: none;
   border: none;
 margin-left: 20px;
   margin-right: 25px;
   font-size: 26px;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -85,7 +80,7 @@ margin-left: 20px;
 .dropdown-menu li {
   padding: 10px 16px;
   cursor: pointer;
-  color: rgb(33, 33, 80);
+  color: black;
   font-weight: bolder;
   transition: all 0.3s ease;
 }
@@ -161,7 +156,7 @@ margin-left: 20px;
   font-family: "Istok Web", sans-serif;
   font-weight: 700;
   font-size: 36px; 
-  background: linear-gradient(to right, rgb(236, 186, 49), #fff8dc); 
+  background: #ECBA31;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

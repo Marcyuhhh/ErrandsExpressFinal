@@ -41,9 +41,9 @@ function Header() {
 
   return (
     <div className="content-area">
-      <header className="main-header">
+      <header className="hmain-header">
         <div
-          className="header-left"
+          className="hheader-left"
           onClick={() => navigate('/home')}
           style={{ cursor: 'pointer' }}
         >
@@ -61,7 +61,7 @@ function Header() {
             <span className="profile-name">{username}</span>
           </div>
 
-          <button className="hamburger-menu-btn" onClick={toggleDropdown}>
+          <button className="hhamburger-menu-btn" onClick={toggleDropdown}>
             ☰
           </button>
 
