@@ -1,36 +1,50 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/ErrandsLogo.png';
-import './adminHeader.css';
+import './adminlayout.css';
 
-function Header() {
-
+function AdminNavbar() {
+  const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [username, setUsername] = useState('Admin');
+
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem('user'));
+    if (userData?.name) {
+      setUsername(userData.name);
+    }
+  }, []);
+
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/');
+  };
+
+  const firstLetter = username.charAt(0).toUpperCase();
+
   return (
-    <div className="content-area">
-      <header className="main-header">
+    <div className="admin-navbar-container">
+      <header className="admin-navbar-header">
         <div
-          className="header-left"
-          onClick={() => navigate('/home')}
+          className="admin-navbar-left"
+          onClick={() => navigate('/verify')}
           style={{ cursor: 'pointer' }}
         >
-          <img src={logo} alt="Errands Logo" className="sidebar-logo" />
-          <h1 className="logo-title">Errands Express</h1>
+          <img src={logo} alt="Errands Logo" className="admin-navbar-logo" />
+          <h1 className="admin-navbar-title">Errands Express</h1>
         </div>
 
-        <div className="header-right">
-          <a className="admin" >
-            ADMINISTRATOR MODE
-          </a>
+        <div className="admin-navbar-right">
+          <div className="admin-navbar-label">ADMINISTRATOR MODE</div>
 
-          <button className="hamburger-menu-btn" onClick={toggleDropdown}>
+          <button className="admin-navbar-hamburger-btn" onClick={toggleDropdown}>
             ☰
           </button>
 
           {dropdownOpen && (
-            <div className="dropdown-menu">
+            <div className="admin-navbar-dropdown-menu">
               <ul>
                 <li>Settings</li>
                 <li onClick={handleLogout}>Log Out</li>
@@ -43,4 +57,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default AdminNavbar;

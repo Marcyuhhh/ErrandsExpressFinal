@@ -1,40 +1,220 @@
-.layout {
+/* --- Sidebar styles (unchanged) --- */
+.admin-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  font-family: sans-serif;
 }
 
 .sidebar {
-  width: 250px;
-  background-color: #222;
+  width: 220px;
+  background-color: #000;
   color: white;
-  flex-shrink: 0;
-  position: fixed; /* So it stays fixed on the left */
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.main-area {
-  margin-left: 260px; /* Space for the sidebar */
-  padding-left: 25px; /* 25px from left (as you want) */
-  padding-top: 90px; /* 80px from the top (as you want) */
-  flex: 1;
-}
-
-.header {
+  padding: 20px;
   position: fixed;
-  top: 0;
-  left: 250px; /* So it starts after sidebar */
-  right: 0;
-  height: 80px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
+  top: 60px; /* below the header */
+  left: 0;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #f4c542;
+  font-size: 1.5em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+  color: white;
+  margin-top: 40px;
+}
+
+.sidebar li.active {
+  color: #f4c542;
+  font-weight: bold;
+}
+
+/* --- Admin main content --- */
+.admin-main {
+  flex: 1;
   display: flex;
+  flex-direction: column;
+  margin-left: 220px;
+  margin-top: 60px;
+}
+
+.admin-body {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.admin-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box {
+  background-color: #e1e1e1;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.box:hover {
+  background-color: #ccc;
+}
+
+.admin-right {
+  width: 350px;
+  background: white;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.img-placeholder {
+  width: 100px;
+  height: 100px;
+  background: #d0d0d0;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.verify-btn {
+  background-color: #f4c542;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- AdminNavbar styles (unique) --- */
+.admin-navbar-container {
+  width: 100%;
+}
+
+.admin-navbar-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  height: 60px;
   padding: 0 20px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  position: relative;
   z-index: 1000;
 }
 
-.content {
-  margin-top: 20px; /* So content is below header */
+.admin-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.admin-navbar-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.admin-navbar-title {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.admin-navbar-label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 15px;
+}
+
+.admin-profile-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.admin-profile-circle {
+  background-color: #f4c542;
+  color: black;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.admin-profile-name {
+  font-weight: bold;
+}
+
+.admin-navbar-hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: black;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.admin-navbar-dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 12px rgb(33, 33, 80);
+  border-radius: 8px;
+  padding: 10px 0;
+  width: 180px;
+  z-index: 1400;
+}
+
+.admin-navbar-dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-navbar-dropdown-menu li {
+  padding: 10px 16px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.admin-navbar-dropdown-menu li:hover {
+  background: linear-gradient(150deg, rgb(38, 38, 226), gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }

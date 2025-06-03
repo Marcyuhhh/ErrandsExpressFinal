@@ -39,7 +39,7 @@ function SignInForm() {
         formData.email === specialEmail &&
         formData.password === specialPassword
       ) {
-        navigate('/admin-dashboard'); // 🎯 Redirect to special page
+        navigate('/verify'); // 🎯 Redirect to special page
       } else {
         navigate('/home'); // 🌐 Default redirect
       }

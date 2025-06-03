@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './adminHeader';
+import Sidebar from './adminsidebar'; // Assume this is your static sidebar
 import { Outlet } from 'react-router-dom';
 import './adminlayout.css';
 
-function Adminlayout() {
+function AdminLayout() {
   return (
-    <div className="layout">
-
-      <div className="main-area">
-        <Header />
-        <main className="content">
-        </main>
+    <div className="admin-layout">
+      <Header />
+      <div className="admin-body">
+        <Sidebar />
+        <div className="admin-main">
+          <Outlet /> {/* Renders middle + right, handled by child route */}
+        </div>
       </div>
     </div>
   );
 }
 
-export default Adminlayout;
+export default AdminLayout;

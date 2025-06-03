@@ -10,8 +10,12 @@ import RunnerHome from './runnermode/runnerHome';
 import Runnerlayout from './components/runnercoms/runnerlayout';
 import RunnerInbox from './runnermode/runnerInbox';
 import RunnerNotification from './runnermode/runnerNotification';
-import AdminDashboard from './adminpage/AdminDashboard'
 import AdminLayout from './components/admincoms/adminlayout'
+import Verify from './adminpage/veriify'
+import Users from './adminpage/users'
+import Transactions from './adminpage/transactions'
+import Reports from './adminpage/reports'
+
 
 function App() {
   return (
@@ -30,7 +34,10 @@ function App() {
         <Route path="/runner/inbox" element={<RunnerInbox />} />
       </Route>
       <Route element={<AdminLayout />}>
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+       <Route path="/verify" element={<Verify />} />
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/users" element={<Users />} />
       </Route>
     </Routes>
   );
