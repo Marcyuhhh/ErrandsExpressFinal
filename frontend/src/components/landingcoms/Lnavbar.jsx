@@ -13,14 +13,14 @@ function Lnavbar() {
   };
 
   return (
-    <header className="Lheader">
-      <div className="logo-container">
-        <img src={logo} alt="Errands Express Logo" className="header-logo" />
+    <header className="landing-header">
+      <div className="landing-logo-container">
+        <img src={logo} alt="Errands Express Logo" className="landing-header-logo" />
         <h1 className="logo">ERRANDS EXPRESS</h1>
       </div>
 
       <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-        <ul className="nav-links">
+        <ul className="landing-nav-links">
            <li><button onClick={() => scrollToSection('home')}>Home</button></li>
   <li><button onClick={() => scrollToSection('about')}>About Us</button></li>
   <li><button onClick={() => scrollToSection('feedbacks')}>Feedbacks</button></li>
